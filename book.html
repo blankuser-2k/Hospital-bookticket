@@ -1,44 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <title>Booking</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
+<div class="container">
+
 <h2>Booking</h2>
 
-<label>Select Hospital</label><br>
-
 <select id="hospital">
+
 <option>City Hospital</option>
 <option>General Hospital</option>
 <option>Medical College</option>
+
 </select>
 
 <br><br>
 
-<label>Select Doctor</label><br>
-
 <select id="doctor">
+
 <option>Smith</option>
 <option>Arun</option>
 <option>Arjun</option>
 <option>Shifna</option>
+
 </select>
 
 <br><br>
 
-<input type="text" id="pname" placeholder="Name"><br><br>
-<input type="text" id="pphone" placeholder="Phone"><br><br>
-<input type="number" id="page" placeholder="Age"><br><br>
+<input type="text" id="pname" placeholder="Name">
 
-<button onclick="bookToken()">Book Token</button>
+<br><br>
+
+<input type="text" id="pphone" placeholder="Phone">
+
+<br><br>
+
+<input type="number" id="page" placeholder="Age">
+
+<br><br>
+
+<button class="btn-blue" onclick="bookToken()">Book Token</button>
+
+<br><br>
 
 <p id="result"></p>
+
+</div>
 
 <script src="script.js"></script>
 
 </body>
-</html>
+  </html>
