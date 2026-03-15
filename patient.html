@@ -1,34 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <title>Patient Login</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
+<div class="container">
+
 <h2>Patient Login</h2>
 
-<input type="text" id="name" placeholder="Enter Name"><br><br>
-<input type="text" id="phone" placeholder="Enter Phone"><br><br>
+<input type="text" id="name" placeholder="Enter Name">
 
-<button onclick="login()">Login</button>
+<br><br>
 
-<div id="menu" style="display:none;">
+<input type="text" id="phone" placeholder="Enter Phone Number">
 
-<h3>Patient Menu</h3>
+<br><br>
+
+<button class="btn-blue" onclick="login()">Login</button>
+
+<br><br>
+
+<div id="menu" style="display:none">
 
 <a href="book.html">
-<button>Book</button>
+<button class="btn-blue">Book</button>
 </a>
 
+<br><br>
+
 <a href="dashboard.html">
-<button>Dashboard</button>
+<button class="btn-blue">Dashboard</button>
 </a>
+
+</div>
 
 </div>
 
 <script src="script.js"></script>
 
 </body>
-</html>
+  </html>
