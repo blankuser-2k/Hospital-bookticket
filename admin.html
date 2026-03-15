@@ -2,7 +2,7 @@
 <html>
 <head>
 
-<title>Admin Login</title>
+<title>Admin Panel</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -16,10 +16,6 @@
 
 <h2>Admin Login</h2>
 
-<input type="text" placeholder="Username">
-
-<br><br>
-
 <input type="password" id="pass" placeholder="Password">
 
 <br><br>
@@ -30,17 +26,43 @@
 
 <div id="adminPanel" style="display:none">
 
-<h3>Admin Panel</h3>
+<h3>Add Doctor</h3>
 
-<input type="text" placeholder="Add Hospital">
-
-<br><br>
-
-<input type="text" placeholder="Add Department">
+<input type="text" id="hospital" placeholder="Hospital">
 
 <br><br>
 
-<input type="text" placeholder="Add Doctor">
+<input type="text" id="department" placeholder="Department">
+
+<br><br>
+
+<input type="text" id="doctor" placeholder="Doctor Name">
+
+<br><br>
+
+<button class="btn-blue" onclick="addDoctor()">Add Doctor</button>
+
+<hr>
+
+<h3>Doctor List</h3>
+
+<ul id="doctorList"></ul>
+
+<hr>
+
+<h3>Update Current Token</h3>
+
+<input type="number" id="currentTokenInput">
+
+<br><br>
+
+<button class="btn-blue" onclick="updateToken()">Update</button>
+
+<hr>
+
+<h3>Patient List</h3>
+
+<ul id="patientList"></ul>
 
 </div>
 
@@ -49,4 +71,4 @@
 <script src="script.js"></script>
 
 </body>
-</html>
+  </html>
