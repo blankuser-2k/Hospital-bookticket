@@ -2,15 +2,24 @@
 <html>
 <head>
 
-<title>Patient Dashboard</title>
+<title>Dashboard</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="stylesheet" href="style.css">
 
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
 <body>
+
+<div class="navbar">
+<a href="index.html">
+<button class="home-btn">Home</button>
+</a>
+</div>
 
 <div class="container">
 
@@ -18,13 +27,13 @@
 
 <h3 id="welcome"></h3>
 
-<p>Your Token Number: <span id="token"></span></p>
+<p><i class="fa-solid fa-ticket"></i> Your Token: <span id="token"></span></p>
 
-<p>Current Token: <span id="current"></span></p>
+<p><i class="fa-solid fa-user-doctor"></i> Current Token: <span id="current"></span></p>
 
-<p>Waiting Patients: <span id="waiting"></span></p>
+<p><i class="fa-solid fa-users"></i> Waiting Patients: <span id="waiting"></span></p>
 
-<p>Estimated Wait Time: <span id="time"></span> mins</p>
+<p><i class="fa-solid fa-clock"></i> Estimated Time: <span id="time"></span> mins</p>
 
 </div>
 
