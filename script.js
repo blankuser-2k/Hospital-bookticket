@@ -1,36 +1,41 @@
+let currentToken = 5
+let waitingPatients = 0
+
 function login(){
 
-let name=document.getElementById("name").value;
+let name = document.getElementById("name").value
 
-localStorage.setItem("patientName",name);
+localStorage.setItem("patientName",name)
 
-document.getElementById("menu").style.display="block";
+document.getElementById("menu").style.display="block"
 
 }
 
 function bookToken(){
 
-let token=Math.floor(Math.random()*100)+1;
+waitingPatients++
 
-localStorage.setItem("token",token);
+let token = currentToken + waitingPatients
 
-document.getElementById("result").innerHTML="Your Token Number: "+token;
+localStorage.setItem("token",token)
+localStorage.setItem("waiting",waitingPatients)
+
+document.getElementById("result").innerHTML="Your Token Number: "+token
 
 }
 
 function adminLogin(){
 
-let password=document.getElementById("pass").value;
+let password=document.getElementById("pass").value
 
 if(password=="12345"){
 
-document.getElementById("adminPanel").style.display="block";
+document.getElementById("adminPanel").style.display="block"
 
 }
-
 else{
 
-alert("Wrong Password");
+alert("Wrong Password")
 
 }
 
@@ -38,15 +43,24 @@ alert("Wrong Password");
 
 window.onload=function(){
 
-let name=localStorage.getItem("patientName");
-let token=localStorage.getItem("token");
+let name=localStorage.getItem("patientName")
+let token=localStorage.getItem("token")
 
 if(document.getElementById("welcome")){
 
-document.getElementById("welcome").innerHTML="Welcome, "+name+" !";
+let waiting = token - currentToken - 1
+let time = waiting * 5
 
-document.getElementById("token").innerHTML=token;
+document.getElementById("welcome").innerHTML="Welcome, "+name+" !"
+
+document.getElementById("token").innerHTML=token
+
+document.getElementById("current").innerHTML=currentToken
+
+document.getElementById("waiting").innerHTML=waiting
+
+document.getElementById("time").innerHTML=time
 
 }
 
-                                     }
+}
