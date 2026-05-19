@@ -4,9 +4,7 @@
 <head>
 
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Book Token</title>
 
@@ -20,127 +18,95 @@
 <body>
 
     <!-- NAVBAR -->
-
     <div class="navbar">
 
         <div class="logo">
 
             <i class="fa-solid fa-hospital"></i>
-
             Hospital OP System
 
         </div>
 
         <a href="index.html">
 
-            <button class="home-btn">
-
-                Home
-
-            </button>
+            <button class="home-btn">Home</button>
 
         </a>
 
     </div>
 
-    <!-- MAIN CONTAINER -->
-
+    <!-- CONTAINER -->
     <div class="container">
 
         <h2>
-
-            <i class="fa-solid fa-user-doctor"></i>
-
+            <i class="fa-solid fa-ticket"></i>
             Book OP Token
-
         </h2>
 
         <!-- PATIENT NAME -->
-
-        <input type="text"
-               id="pname"
-               placeholder="Enter Patient Name">
+        <input type="text" id="pname" placeholder="Enter Patient Name">
 
         <!-- AGE -->
-
-        <input type="number"
-               id="age"
-               placeholder="Enter Age">
+        <input type="number" id="age" placeholder="Enter Age">
 
         <!-- HOSPITAL -->
+        <select id="hospital" onchange="loadDoctorDropdown()">
 
-        <select id="hospital">
+            <option value="">Select Hospital</option>
 
-            <option value="">
-                Select Hospital
-            </option>
-
-            <option>
-                City Hospital
-            </option>
-
-            <option>
-                General Hospital
-            </option>
-
-            <option>
-                Medical College
-            </option>
+            <option>City Hospital</option>
+            <option>General Hospital</option>
+            <option>Medical College</option>
 
         </select>
 
         <!-- DEPARTMENT -->
+        <select id="department" onchange="loadDoctorDropdown()">
 
-        <select id="department">
+            <option value="">Select Department</option>
 
-            <option value="">
-                Select Department
-            </option>
-
-            <option>
-                General Medicine
-            </option>
-
-            <option>
-                ENT
-            </option>
-
-            <option>
-                Cardiology
-            </option>
-
-            <option>
-                Orthopedics
-            </option>
+            <option>General Medicine</option>
+            <option>ENT</option>
+            <option>Cardiology</option>
+            <option>Orthopedics</option>
 
         </select>
 
         <!-- DOCTOR -->
-
         <select id="doctor">
 
-            <option value="">
-                Select Doctor
-            </option>
+            <option value="">Select Doctor</option>
 
         </select>
 
         <!-- BOOK BUTTON -->
-
-        <button class="btn-blue"
-                onclick="bookToken()">
+        <button class="btn-blue" onclick="bookToken()">
 
             <i class="fa-solid fa-ticket"></i>
-
             Generate Token
 
         </button>
 
         <!-- RESULT -->
+        <div id="result" class="result-box" style="display:none;"></div>
 
-        <div id="result"
-             class="result-box"
-             style="display:none;">
+        <!-- DASHBOARD BUTTON -->
+        <div style="margin-top:20px; padding:12px; background:#f8f9fa; border-radius:10px;">
+
+            <p style="margin-bottom:10px; color:#555;">
+                Already booked token? Check live status here
+            </p>
+
+            <a href="dashboard.html">
+
+                <button class="btn-blue">
+
+                    <i class="fa-solid fa-chart-line"></i>
+                    View Live Dashboard
+
+                </button>
+
+            </a>
 
         </div>
 
@@ -150,4 +116,4 @@
 
 </body>
 
-  </html>
+                    </html>
