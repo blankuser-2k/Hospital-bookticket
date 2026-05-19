@@ -1,68 +1,153 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
 
-<title>Book Token</title>
+    <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="style.css">
+    <title>Book Token</title>
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
 <body>
 
-<div class="navbar">
-<a href="index.html">
-<button class="home-btn">Home</button>
-</a>
-</div>
+    <!-- NAVBAR -->
 
-<div class="container">
+    <div class="navbar">
 
-<h2><i class="fa-solid fa-user-doctor"></i> Book Token</h2>
+        <div class="logo">
 
-<input type="text" id="pname" placeholder="Patient Name">
+            <i class="fa-solid fa-hospital"></i>
 
-<br><br>
+            Hospital OP System
 
-<input type="number" id="age" placeholder="Age">
+        </div>
 
-<br><br>
+        <a href="index.html">
 
-<select id="hospital">
+            <button class="home-btn">
 
-<option>City Hospital</option>
-<option>General Hospital</option>
-<option>Medical College</option>
+                Home
 
-</select>
+            </button>
 
-<br><br>
+        </a>
 
-<select id="doctor">
+    </div>
 
-<option>Dr Smith</option>
-<option>Dr Arun</option>
-<option>Dr Arjun</option>
-<option>Dr Shifna</option>
+    <!-- MAIN CONTAINER -->
 
-</select>
+    <div class="container">
 
-<br><br>
+        <h2>
 
-<button class="btn-blue" onclick="bookToken()">Book Token</button>
+            <i class="fa-solid fa-user-doctor"></i>
 
-<br><br>
+            Book OP Token
 
-<p id="result"></p>
+        </h2>
 
-</div>
+        <!-- PATIENT NAME -->
 
-<script src="script.js"></script>
+        <input type="text"
+               id="pname"
+               placeholder="Enter Patient Name">
+
+        <!-- AGE -->
+
+        <input type="number"
+               id="age"
+               placeholder="Enter Age">
+
+        <!-- HOSPITAL -->
+
+        <select id="hospital">
+
+            <option value="">
+                Select Hospital
+            </option>
+
+            <option>
+                City Hospital
+            </option>
+
+            <option>
+                General Hospital
+            </option>
+
+            <option>
+                Medical College
+            </option>
+
+        </select>
+
+        <!-- DEPARTMENT -->
+
+        <select id="department">
+
+            <option value="">
+                Select Department
+            </option>
+
+            <option>
+                General Medicine
+            </option>
+
+            <option>
+                ENT
+            </option>
+
+            <option>
+                Cardiology
+            </option>
+
+            <option>
+                Orthopedics
+            </option>
+
+        </select>
+
+        <!-- DOCTOR -->
+
+        <select id="doctor">
+
+            <option value="">
+                Select Doctor
+            </option>
+
+        </select>
+
+        <!-- BOOK BUTTON -->
+
+        <button class="btn-blue"
+                onclick="bookToken()">
+
+            <i class="fa-solid fa-ticket"></i>
+
+            Generate Token
+
+        </button>
+
+        <!-- RESULT -->
+
+        <div id="result"
+             class="result-box"
+             style="display:none;">
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
 
 </body>
+
   </html>
