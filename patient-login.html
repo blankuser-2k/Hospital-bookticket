@@ -1,50 +1,115 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
 
-<title>Patient Login</title>
+    <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="style.css">
+    <title>Patient Login</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
 <body>
 
-<div class="container">
+    <!-- NAVBAR -->
 
-<h2>Patient Login</h2>
+    <div class="navbar">
 
-<input type="text" id="name" placeholder="Enter Name">
+        <div class="logo">
+            <i class="fa-solid fa-hospital"></i>
+            Hospital OP System
+        </div>
 
-<br><br>
+        <a href="index.html">
 
-<input type="text" id="phone" placeholder="Phone Number">
+            <button class="home-btn">
 
-<br><br>
+                Home
 
-<button class="btn-blue" onclick="login()">Login</button>
+            </button>
 
-<br><br>
+        </a>
 
-<div id="menu" style="display:none">
+    </div>
 
-<a href="book.html">
-<button class="btn-blue">Book Token</button>
-</a>
+    <!-- LOGIN CONTAINER -->
 
-<br><br>
+    <div class="container">
 
-<a href="dashboard.html">
-<button class="btn-blue">Dashboard</button>
-</a>
+        <h2>
 
-</div>
+            <i class="fa-solid fa-user"></i>
 
-</div>
+            Patient Login
 
-<script src="script.js"></script>
+        </h2>
+
+        <!-- NAME -->
+
+        <input type="text"
+               id="name"
+               placeholder="Enter Full Name">
+
+        <!-- PHONE -->
+
+        <input type="text"
+               id="phone"
+               placeholder="Enter Phone Number">
+
+        <!-- LOGIN BUTTON -->
+
+        <button class="btn-blue"
+                onclick="login()">
+
+            <i class="fa-solid fa-right-to-bracket"></i>
+
+            Login
+
+        </button>
+
+        <!-- MENU -->
+
+        <div id="menu"
+             style="display:none; margin-top:25px;">
+
+            <a href="book.html">
+
+                <button class="btn-blue">
+
+                    <i class="fa-solid fa-ticket"></i>
+
+                    Book Token
+
+                </button>
+
+            </a>
+
+            <a href="dashboard.html">
+
+                <button class="btn-blue">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                    Dashboard
+
+                </button>
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
 
 </body>
-</html>
+
+  </html>
