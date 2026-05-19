@@ -1,43 +1,148 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
 
-<title>Dashboard</title>
+    <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="style.css">
+    <title>Patient Dashboard</title>
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
 <body>
 
-<div class="navbar">
-<a href="index.html">
-<button class="home-btn">Home</button>
-</a>
-</div>
+    <!-- NAVBAR -->
 
-<div class="container">
+    <div class="navbar">
 
-<h2>Patient Dashboard</h2>
+        <div class="logo">
 
-<h3 id="welcome"></h3>
+            <i class="fa-solid fa-hospital"></i>
 
-<p><i class="fa-solid fa-ticket"></i> Your Token: <span id="token"></span></p>
+            Hospital OP System
 
-<p><i class="fa-solid fa-user-doctor"></i> Current Token: <span id="current"></span></p>
+        </div>
 
-<p><i class="fa-solid fa-users"></i> Waiting Patients: <span id="waiting"></span></p>
+        <a href="index.html">
 
-<p><i class="fa-solid fa-clock"></i> Estimated Time: <span id="time"></span> mins</p>
+            <button class="home-btn">
 
-</div>
+                Home
 
-<script src="script.js"></script>
+            </button>
+
+        </a>
+
+    </div>
+
+    <!-- MAIN CONTAINER -->
+
+    <div class="container">
+
+        <h2>
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            Patient Dashboard
+
+        </h2>
+
+        <!-- YOUR TOKEN -->
+
+        <div class="card">
+
+            <h3>
+
+                <i class="fa-solid fa-ticket"></i>
+
+                Your Token
+
+            </h3>
+
+            <div class="big-text"
+                 id="myToken">
+
+                OP101
+
+            </div>
+
+        </div>
+
+        <!-- CURRENT TOKEN -->
+
+        <div class="card">
+
+            <h3>
+
+                <i class="fa-solid fa-user-doctor"></i>
+
+                Now Serving
+
+            </h3>
+
+            <div class="big-text"
+                 id="currentToken">
+
+                OP100
+
+            </div>
+
+        </div>
+
+        <!-- WAITING -->
+
+        <div class="card">
+
+            <h3>
+
+                <i class="fa-solid fa-users"></i>
+
+                Waiting Patients
+
+            </h3>
+
+            <div class="big-text"
+                 id="waitingCount">
+
+                0
+
+            </div>
+
+        </div>
+
+        <!-- TIME -->
+
+        <div class="card">
+
+            <h3>
+
+                <i class="fa-solid fa-clock"></i>
+
+                Estimated Waiting Time
+
+            </h3>
+
+            <div class="big-text"
+                 id="waitingTime">
+
+                0 mins
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
 
 </body>
-</html>
+
+              </html>
