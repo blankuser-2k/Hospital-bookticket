@@ -1,74 +1,163 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
 
-<title>Admin Panel</title>
+    <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="style.css">
+    <title>Admin Panel</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
 <body>
 
-<div class="container">
+    <!-- NAVBAR -->
 
-<h2>Admin Login</h2>
+    <div class="navbar">
 
-<input type="password" id="pass" placeholder="Password">
+        <div class="logo">
 
-<br><br>
+            <i class="fa-solid fa-hospital"></i>
 
-<button class="btn-blue" onclick="adminLogin()">Login</button>
+            Hospital Admin Panel
 
-<br><br>
+        </div>
 
-<div id="adminPanel" style="display:none">
+        <a href="index.html">
 
-<h3>Add Doctor</h3>
+            <button class="home-btn">
 
-<input type="text" id="hospital" placeholder="Hospital">
+                Home
 
-<br><br>
+            </button>
 
-<input type="text" id="department" placeholder="Department">
+        </a>
 
-<br><br>
+    </div>
 
-<input type="text" id="doctor" placeholder="Doctor Name">
+    <!-- MAIN CONTAINER -->
 
-<br><br>
+    <div class="container">
 
-<button class="btn-blue" onclick="addDoctor()">Add Doctor</button>
+        <h2>
 
-<hr>
+            <i class="fa-solid fa-user-shield"></i>
 
-<h3>Doctor List</h3>
+            Admin Login
 
-<ul id="doctorList"></ul>
+        </h2>
 
-<hr>
+        <!-- PASSWORD -->
 
-<h3>Update Current Token</h3>
+        <input type="password"
+               id="pass"
+               placeholder="Enter Admin Password">
 
-<input type="number" id="currentTokenInput">
+        <!-- LOGIN BUTTON -->
 
-<br><br>
+        <button class="btn-blue"
+                onclick="adminLogin()">
 
-<button class="btn-blue" onclick="updateToken()">Update</button>
+            Login
 
-<hr>
+        </button>
 
-<h3>Patient List</h3>
+        <!-- ADMIN PANEL -->
 
-<ul id="patientList"></ul>
+        <div id="adminPanel"
+             style="display:none; margin-top:25px;">
 
-</div>
+            <!-- ADD DOCTOR -->
 
-</div>
+            <h3>
 
-<script src="script.js"></script>
+                <i class="fa-solid fa-user-doctor"></i>
+
+                Add Doctor
+
+            </h3>
+
+            <input type="text"
+                   id="hospital"
+                   placeholder="Hospital Name">
+
+            <input type="text"
+                   id="department"
+                   placeholder="Department">
+
+            <input type="text"
+                   id="doctorName"
+                   placeholder="Doctor Name">
+
+            <button class="btn-blue"
+                    onclick="addDoctor()">
+
+                Add Doctor
+
+            </button>
+
+            <!-- DOCTOR LIST -->
+
+            <h3 style="margin-top:25px;">
+
+                Doctor List
+
+            </h3>
+
+            <ul id="doctorList"></ul>
+
+            <!-- TOKEN CONTROL -->
+
+            <h3 style="margin-top:25px;">
+
+                Queue Controls
+
+            </h3>
+
+            <input type="number"
+                   id="currentTokenInput"
+                   placeholder="Enter Current Token Number">
+
+            <button class="btn-blue"
+                    onclick="updateCurrentToken()">
+
+                Update Current Token
+
+            </button>
+
+            <!-- NEXT TOKEN -->
+
+            <button class="btn-blue"
+                    onclick="nextToken()">
+
+                Next Token
+
+            </button>
+
+            <!-- PATIENT LIST -->
+
+            <h3 style="margin-top:25px;">
+
+                Patient Queue
+
+            </h3>
+
+            <ul id="patientList"></ul>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
 
 </body>
-  </html>
+
+          </html>
